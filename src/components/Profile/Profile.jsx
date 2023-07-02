@@ -25,7 +25,6 @@ export const Profile = (props) => {
           <span className={css.quantity}>{likes}</span>
         </li>
       </ul>
-    
     </div>
   )
 };
