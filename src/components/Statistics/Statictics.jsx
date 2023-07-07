@@ -5,14 +5,13 @@ export const Statistics = ({ title, stats }) => {
     <section className={css.statistics}>
       {title && <h2 className={css.title}>{title}</h2>}
       <ul className={css.list}>
-              {stats.map(({ label, id, percentage }) => {
-            
-            return(
-                <li className={css.item}>
-                    <span className={css.label}>{label}</span>
-                    <span className={css.percentage}>{percentage}%</span>
-                </li>
-            )
+        {stats.map(({ label, id, percentage }) => {
+          return (
+            <li className={css.item} key={id}>
+              <span className={css.label}>{label}</span>
+              <span className={css.percentage}>{percentage}%</span>
+            </li>
+          );
         })}
       </ul>
     </section>
@@ -20,7 +19,11 @@ export const Statistics = ({ title, stats }) => {
 };
 Statistics.propTypes = {
   title: PropTypes.string,
-  label: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      label: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
