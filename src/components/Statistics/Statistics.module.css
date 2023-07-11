@@ -16,15 +16,25 @@
   text-align: center;
   text-transform: uppercase;
 }
+
 .list {
 display: flex;
-
+width:100%;
 }
+
 .item {display: flex;
 flex-direction: column;
 gap: 10px;
 margin-bottom: 10px;
-padding-top: 10px;}
+padding-top: 10px;
+width: 25%;
+align-items: center;
+}
+
+.label {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 .percentage {
     font-size: 22px;
 }
