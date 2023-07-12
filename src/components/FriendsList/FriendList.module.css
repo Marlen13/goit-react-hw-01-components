@@ -1,0 +1,11 @@
+.friendlist {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    row-gap: 8px;
+    width: 500px;
+ 
+ 
+    
+}
