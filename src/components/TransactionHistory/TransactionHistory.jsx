@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './TransactionHistory.module.css';
 export const TransactionHistory =({items}) => {
   return (
@@ -24,3 +24,11 @@ export const TransactionHistory =({items}) => {
     </table>
   );
 };
+
+TransactionHistory.protoTypes = {
+    items: PropTypes.arrayOf(PropTypes.exact({
+        type: PropTypes.string,
+        amount: PropTypes.string,
+        currency: PropTypes.string,  
+   }))
+}
